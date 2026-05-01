@@ -156,3 +156,16 @@ Regenerate demo outputs:
 python scripts/generate_demo_outputs.py
 ```
 
+## Developer Commands
+
+Common project commands are available through `make`.
+
+| Command | Purpose |
+|---|---|
+| `make install` | Install project dependencies |
+| `make test` | Run pytest suite |
+| `make eval` | Run retrieval evaluation and save metrics |
+| `make demo` | Generate portfolio demo outputs |
+| `make app` | Launch the Streamlit app |
+| `make all` | Run tests, retrieval evaluation, and demo generation |
+
