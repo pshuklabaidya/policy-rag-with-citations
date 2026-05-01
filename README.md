@@ -193,3 +193,19 @@ The generated report is saved to `reports/corpus_profile.json`.
 
 Detailed architecture notes are available in `docs/architecture.md`.
 
+## Streamlit Demo Features
+
+The Streamlit app includes:
+
+- Quick-question buttons for common policy questions
+- Top-source confidence display
+- Retrieved-source table with policy title, section, file path, and score
+- Expandable evidence panels for citation traceability
+- Configurable retrieval count and confidence threshold
+
+Run the app:
+
+```bash
+make app
+```
+
