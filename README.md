@@ -1,159 +1,96 @@
-# AI Project Template
+# Policy RAG With Citations
 
-Reusable Streamlit-first template for building AI portfolio projects focused on Agentic RAG, LLM evaluation, synthetic-data demos, AI automation, and decision-support workflows.
+[![CI](https://github.com/pshuklabaidya/policy-rag-with-citations/actions/workflows/ci.yml/badge.svg)](https://github.com/pshuklabaidya/policy-rag-with-citations/actions/workflows/ci.yml)
 
-> Status: Template repository for AI portfolio projects. This repository is not a finished AI application.
+A lightweight retrieval-augmented generation demo for answering questions over synthetic workplace policy documents with source citations, confidence scoring, retrieval evaluation, and abstention behavior.
 
-## Purpose
+## Overview
 
-This template provides a consistent starting structure for AI portfolio repositories that demonstrate:
+Policy RAG With Citations demonstrates citation-grounded document intelligence over a synthetic workplace policy corpus. The system loads markdown policy documents, chunks them by section, retrieves relevant sections with TF-IDF cosine similarity, and returns answers tied to traceable source metadata.
 
-- Clear business problem framing
-- Synthetic-data disclosure
-- Streamlit-first demo design
-- Reproducible setup instructions
-- Tests and quality checks
-- Evaluation notes
-- Executive-polished documentation
-- Responsible AI boundaries
+## Features
 
-## Intended Use
+- Synthetic workplace policy corpus
+- Section-based markdown chunking
+- Lightweight TF-IDF retrieval
+- Citation-grounded answers
+- Source metadata with policy title, section, file path, and retrieval score
+- Low-confidence abstention behavior
+- Streamlit demo interface
+- Command-line query demo
+- Retrieval evaluation script
+- Corpus profiling script
+- Pytest coverage
+- GitHub Actions CI
 
-Use this template to create portfolio projects such as:
+## Synthetic Data Disclosure
 
-- Agentic RAG customer support assistant
-- LLM evaluation harness
-- Policy or financial document RAG assistant
-- Product analytics copilot
-- Compliance-aware document assistant
-- AI workflow automation dashboard
-- Synthetic business intelligence demo
+All policy documents in this repository are synthetic and created for portfolio demonstration purposes only. No real company policy, employee data, customer data, or proprietary internal data is used.
 
-## Template Principles
+## Architecture Documentation
 
-Every project created from this template should follow these principles:
+Detailed architecture notes are available in `docs/architecture.md`.
 
-- Use synthetic or public data only unless clear data rights exist.
-- Label synthetic datasets clearly.
-- Include setup instructions.
-- Include tests.
-- Include limitations.
-- Include evaluation notes.
+## Data And Corpus Profile
 
-## Repository Structure
+The synthetic policy corpus is documented in `docs/data_dictionary.md`.
 
-```text
-.
-├── app/
-├── src/
-├── tests/
-├── data/synthetic/
-├── docs/
-├── evals/
-├── scripts/
-├── .github/workflows/
-├── README.md
-├── SECURITY.md
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── LICENSE
-├── requirements.txt
-├── pyproject.toml
-└── .env.example
-```
-
-## Folder And File Guide
-
-| Path | Purpose |
-|---|---|
-| `app/` | Streamlit app entrypoints and demo UI files |
-| `src/` | Reusable application logic, RAG pipelines, agents, schemas, and utilities |
-| `tests/` | Unit tests, smoke tests, and regression checks |
-| `data/synthetic/` | Clearly labeled synthetic datasets used for demo workflows |
-| `docs/` | Architecture notes, data dictionaries, diagrams, implementation notes, and evaluation summaries |
-| `evals/` | Evaluation datasets, metrics scripts, and result summaries |
-| `scripts/` | Data generation, ingestion, evaluation, and setup scripts |
-| `.github/workflows/` | GitHub Actions workflows for tests and quality checks |
-
-## Recommended Project README Pattern
-
-Each generated project should replace this template README with a project-specific README containing:
-
-- Project title
-- One-sentence value proposition
-- Demo status
-- Synthetic-data disclosure
-- Business problem
-- Architecture overview
-- Features
-- Tech stack
-- Quickstart
-- Example usage
-- Evaluation
-- Tests
-- Limitations
-- Roadmap
-- License
-
-## Synthetic-Data Disclosure Template
-
-Use language like this in every generated project:
-
-> This project uses synthetic data for educational and portfolio demonstration purposes. It does not contain private customer data, employer data, confidential records, or production exports.
-
-## Recommended Tech Stack
-
-Default stack:
-
-- Python
-- Streamlit
-- Pandas
-- Pytest
-- Ruff
-- GitHub Actions
-
-Optional additions by project type:
-
-- LangChain or LlamaIndex for RAG workflows
-- Chroma or Qdrant for vector retrieval
-- FastAPI for API-first demos
-- Docker for stronger reproducibility
-- MkDocs or GitHub Pages for expanded documentation
-
-## Quality Checklist
-
-Before featuring any project created from this template:
-
-- [ ] README explains the business problem clearly.
-- [ ] Synthetic data is disclosed clearly.
-- [ ] Setup instructions work from a fresh clone.
-- [ ] Tests exist and pass.
-- [ ] GitHub Actions workflow runs successfully.
-- [ ] Limitations are explicit.
-- [ ] Evaluation notes explain quality checks, metrics, and failure cases.
-- [ ] No real secrets are committed.
-- [ ] No unsupported production claims appear.
-- [ ] Demo scope is honest and recruiter-friendly.
-
-## Responsible Use
-
-This template is for legitimate educational and portfolio demonstrations. It should not be used to create deceptive, malicious, privacy-invasive, credential-stealing, exploit-generating, surveillance, spam, or security-sensitive tooling.
-
-## License
-
-MIT
-
-## Portfolio Evidence
-
-The repository includes generated demo and evaluation artifacts:
-
-- `reports/demo_outputs.md` shows example questions, citation-grounded answers, source sections, retrieval scores, and abstention behavior.
-- `reports/retrieval_eval.json` stores retrieval evaluation metrics for the baseline question set.
-
-Regenerate demo outputs:
+Generate a corpus profile:
 
 ```bash
-python scripts/generate_demo_outputs.py
+python scripts/profile_corpus.py
+```
+
+The generated report is saved to `reports/corpus_profile.json`.
+
+## Project Structure
+
+```text
+policy-rag-with-citations/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── .streamlit/
+│   └── config.toml
+├── app/
+│   └── streamlit_app.py
+├── data/
+│   ├── eval/
+│   │   └── eval_questions.json
+│   └── policies/
+│       ├── expense_policy.md
+│       ├── remote_work_policy.md
+│       └── security_policy.md
+├── docs/
+│   ├── architecture.md
+│   ├── data_dictionary.md
+│   └── demo_questions.md
+├── reports/
+│   ├── corpus_profile.json
+│   ├── demo_outputs.md
+│   └── retrieval_eval.json
+├── scripts/
+│   ├── evaluate_retrieval.py
+│   ├── generate_demo_outputs.py
+│   ├── profile_corpus.py
+│   └── query_policy.py
+├── src/
+│   ├── app_utils.py
+│   ├── chunking.py
+│   ├── citations.py
+│   ├── rag_pipeline.py
+│   └── retrieval.py
+├── tests/
+├── Makefile
+├── pytest.ini
+├── requirements.txt
+└── README.md
+```
+
+## Setup
+
+```bash
+python -m pip install -r requirements.txt
 ```
 
 ## Developer Commands
@@ -169,31 +106,51 @@ Common project commands are available through `make`.
 | `make app` | Launch the Streamlit app |
 | `make all` | Run tests, retrieval evaluation, and demo generation |
 
-## Suggested Repository Topics
-
-Recommended GitHub topics for this project:
-
-```text
-rag, retrieval-augmented-generation, citations, streamlit, synthetic-data, document-ai, ai-portfolio
-```
-
-## Data And Corpus Profile
-
-The synthetic policy corpus is documented in `docs/data_dictionary.md`.
-
-Generate a corpus profile:
+## Run Tests
 
 ```bash
-python scripts/profile_corpus.py
+pytest -q
 ```
 
-The generated report is saved to `reports/corpus_profile.json`.
+## Run Retrieval Evaluation
 
-## Architecture Documentation
+```bash
+python scripts/evaluate_retrieval.py
+```
 
-Detailed architecture notes are available in `docs/architecture.md`.
+Generate a saved JSON metrics report:
 
-## Streamlit Demo Features
+```bash
+python scripts/evaluate_retrieval.py --output reports/retrieval_eval.json
+```
+
+Current baseline target:
+
+```text
+Top-1 accuracy: 100.00%
+```
+
+## Command-Line Demo
+
+Ask a policy question directly from the terminal:
+
+```bash
+python scripts/query_policy.py "What is the deadline for submitting an expense report?"
+```
+
+Run an unsupported question with stricter abstention behavior:
+
+```bash
+python scripts/query_policy.py "What is the company stock price?" --min-score 0.50
+```
+
+Additional examples are available in `docs/demo_questions.md`.
+
+## Run Streamlit App
+
+```bash
+python -m streamlit run app/streamlit_app.py
+```
 
 The Streamlit app includes:
 
@@ -203,9 +160,100 @@ The Streamlit app includes:
 - Expandable evidence panels for citation traceability
 - Configurable retrieval count and confidence threshold
 
-Run the app:
+## Example Questions
 
-```bash
-make app
+```text
+What is the deadline for submitting an expense report?
 ```
 
+```text
+When must security incidents be reported?
+```
+
+```text
+What are the core collaboration hours for remote employees?
+```
+
+```text
+Which systems require multi-factor authentication?
+```
+
+```text
+What is the company stock price?
+```
+
+## Retrieval Evaluation
+
+The repository includes a small retrieval evaluation set that checks whether the top-ranked source matches the expected policy section.
+
+The saved baseline report is available at:
+
+```text
+reports/retrieval_eval.json
+```
+
+## Portfolio Evidence
+
+The repository includes generated demo and evaluation artifacts:
+
+- `reports/demo_outputs.md` shows example questions, citation-grounded answers, source sections, retrieval scores, and abstention behavior.
+- `reports/retrieval_eval.json` stores retrieval evaluation metrics for the baseline question set.
+- `reports/corpus_profile.json` stores document and chunk metadata for the synthetic policy corpus.
+
+Regenerate demo outputs:
+
+```bash
+python scripts/generate_demo_outputs.py
+```
+
+## Continuous Integration
+
+GitHub Actions runs tests and retrieval evaluation on every push and pull request.
+
+```text
+.github/workflows/ci.yml
+```
+
+## Architecture
+
+The system loads markdown policy documents, splits them into policy-section chunks, ranks chunks against a user query with TF-IDF cosine similarity, and formats the answer with citation metadata. Each citation includes the policy title, section ID, source file, and retrieval score.
+
+## Portfolio Value
+
+This project highlights practical RAG implementation skills:
+
+- Document ingestion
+- Chunking strategy
+- Retrieval ranking
+- Citation formatting
+- Evidence transparency
+- Abstention behavior
+- Evaluation design
+- Streamlit demo development
+- CLI tooling
+- CI automation
+- Responsible synthetic-data disclosure
+
+## Suggested Repository Topics
+
+Recommended GitHub topics for this project:
+
+```text
+rag, retrieval-augmented-generation, citations, streamlit, synthetic-data, document-ai, ai-portfolio
+```
+
+## Limitations
+
+The baseline uses TF-IDF retrieval rather than hosted embeddings or a vector database. This keeps the demo lightweight and easy to run, while preserving the core citation-grounded RAG workflow.
+
+The answer generator is intentionally simple and extractive. A production version would use a stronger language model with stricter prompt controls, citation validation, access controls, logging, and human review workflows.
+
+## Future Enhancements
+
+- Add embedding-based retrieval as an optional backend
+- Add vector database support
+- Add richer answer synthesis with citation validation
+- Add per-query retrieval diagnostics
+- Add user feedback capture
+- Add document upload support
+- Add deployment configuration
