@@ -1,0 +1,42 @@
+{
+  "total_questions": 5,
+  "top_1_correct": 5,
+  "top_1_accuracy": 1.0,
+  "results": [
+    {
+      "question": "What is the deadline for submitting an expense report?",
+      "expected_source": "Expense Reimbursement Policy - EX-3 Submission Deadline",
+      "predicted_source": "Expense Reimbursement Policy - EX-3 Submission Deadline",
+      "top_score": 0.2203,
+      "passed": true
+    },
+    {
+      "question": "When must security incidents be reported?",
+      "expected_source": "Information Security Policy - SEC-4 Incident Reporting",
+      "predicted_source": "Information Security Policy - SEC-4 Incident Reporting",
+      "top_score": 0.4016,
+      "passed": true
+    },
+    {
+      "question": "What are the core collaboration hours for remote employees?",
+      "expected_source": "Remote Work Policy - RW-3 Core Collaboration Hours",
+      "predicted_source": "Remote Work Policy - RW-3 Core Collaboration Hours",
+      "top_score": 0.637,
+      "passed": true
+    },
+    {
+      "question": "Are personal devices allowed for regular remote work?",
+      "expected_source": "Remote Work Policy - RW-4 Equipment",
+      "predicted_source": "Remote Work Policy - RW-4 Equipment",
+      "top_score": 0.3813,
+      "passed": true
+    },
+    {
+      "question": "Which systems require multi-factor authentication?",
+      "expected_source": "Information Security Policy - SEC-2 Multi-Factor Authentication",
+      "predicted_source": "Information Security Policy - SEC-2 Multi-Factor Authentication",
+      "top_score": 0.6052,
+      "passed": true
+    }
+  ]
+}
