@@ -258,6 +258,18 @@ The baseline uses TF-IDF retrieval rather than hosted embeddings or a vector dat
 
 The answer generator is intentionally simple and extractive. A production version would use a stronger language model with stricter prompt controls, citation validation, access controls, logging, and human review workflows.
 
+## Completion Checklist
+
+Final project completion notes are available in `docs/completion_checklist.md`.
+
+Validation commands:
+
+```bash
+pytest -q
+python scripts/project_health_check.py
+make all
+```
+
 ## Future Enhancements
 
 - Add embedding-based retrieval as an optional backend
