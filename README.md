@@ -177,3 +177,7 @@ Recommended GitHub topics for this project:
 rag, retrieval-augmented-generation, citations, streamlit, synthetic-data, document-ai, ai-portfolio
 ```
 
+## Architecture Documentation
+
+Detailed architecture notes are available in `docs/architecture.md`.
+
