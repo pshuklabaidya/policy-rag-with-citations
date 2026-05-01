@@ -169,3 +169,11 @@ Common project commands are available through `make`.
 | `make app` | Launch the Streamlit app |
 | `make all` | Run tests, retrieval evaluation, and demo generation |
 
+## Suggested Repository Topics
+
+Recommended GitHub topics for this project:
+
+```text
+rag, retrieval-augmented-generation, citations, streamlit, synthetic-data, document-ai, ai-portfolio
+```
+
