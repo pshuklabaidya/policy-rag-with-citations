@@ -1,4 +1,4 @@
-.PHONY: install test eval demo app all
+.PHONY: install test eval demo app health all
 
 install:
 	python -m pip install -r requirements.txt
@@ -15,4 +15,7 @@ demo:
 app:
 	python -m streamlit run app/streamlit_app.py
 
-all: test eval demo
+health:
+	python scripts/project_health_check.py
+
+all: test eval demo health

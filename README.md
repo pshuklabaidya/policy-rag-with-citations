@@ -27,6 +27,16 @@ Policy RAG With Citations demonstrates citation-grounded document intelligence o
 
 All policy documents in this repository are synthetic and created for portfolio demonstration purposes only. No real company policy, employee data, customer data, or proprietary internal data is used.
 
+## Project Summary
+
+A concise project summary for portfolio review is available in `docs/project_summary.md`.
+
+Run the final project health check:
+
+```bash
+python scripts/project_health_check.py
+```
+
 ## Architecture Documentation
 
 Detailed architecture notes are available in `docs/architecture.md`.
