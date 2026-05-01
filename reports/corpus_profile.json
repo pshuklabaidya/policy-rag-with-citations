@@ -1,0 +1,177 @@
+{
+  "policy_dir": "data/policies",
+  "document_count": 3,
+  "chunk_count": 21,
+  "documents": [
+    {
+      "doc_id": "expense_policy",
+      "title": "Expense Reimbursement Policy",
+      "source": "data/policies/expense_policy.md",
+      "character_count": 1201,
+      "chunk_count": 7
+    },
+    {
+      "doc_id": "remote_work_policy",
+      "title": "Remote Work Policy",
+      "source": "data/policies/remote_work_policy.md",
+      "character_count": 1254,
+      "chunk_count": 7
+    },
+    {
+      "doc_id": "security_policy",
+      "title": "Information Security Policy",
+      "source": "data/policies/security_policy.md",
+      "character_count": 1261,
+      "chunk_count": 7
+    }
+  ],
+  "chunks": [
+    {
+      "doc_id": "expense_policy",
+      "title": "Expense Reimbursement Policy",
+      "section": "Expense Reimbursement Policy",
+      "source": "data/policies/expense_policy.md",
+      "character_count": 83
+    },
+    {
+      "doc_id": "expense_policy",
+      "title": "Expense Reimbursement Policy",
+      "section": "EX-1 Eligible Expenses",
+      "source": "data/policies/expense_policy.md",
+      "character_count": 208
+    },
+    {
+      "doc_id": "expense_policy",
+      "title": "Expense Reimbursement Policy",
+      "section": "EX-2 Receipts",
+      "source": "data/policies/expense_policy.md",
+      "character_count": 138
+    },
+    {
+      "doc_id": "expense_policy",
+      "title": "Expense Reimbursement Policy",
+      "section": "EX-3 Submission Deadline",
+      "source": "data/policies/expense_policy.md",
+      "character_count": 199
+    },
+    {
+      "doc_id": "expense_policy",
+      "title": "Expense Reimbursement Policy",
+      "section": "EX-4 Meal Limits",
+      "source": "data/policies/expense_policy.md",
+      "character_count": 187
+    },
+    {
+      "doc_id": "expense_policy",
+      "title": "Expense Reimbursement Policy",
+      "section": "EX-5 Prohibited Expenses",
+      "source": "data/policies/expense_policy.md",
+      "character_count": 209
+    },
+    {
+      "doc_id": "expense_policy",
+      "title": "Expense Reimbursement Policy",
+      "section": "EX-6 Approval",
+      "source": "data/policies/expense_policy.md",
+      "character_count": 157
+    },
+    {
+      "doc_id": "remote_work_policy",
+      "title": "Remote Work Policy",
+      "section": "Remote Work Policy",
+      "source": "data/policies/remote_work_policy.md",
+      "character_count": 73
+    },
+    {
+      "doc_id": "remote_work_policy",
+      "title": "Remote Work Policy",
+      "section": "RW-1 Eligibility",
+      "source": "data/policies/remote_work_policy.md",
+      "character_count": 209
+    },
+    {
+      "doc_id": "remote_work_policy",
+      "title": "Remote Work Policy",
+      "section": "RW-2 Work Location",
+      "source": "data/policies/remote_work_policy.md",
+      "character_count": 198
+    },
+    {
+      "doc_id": "remote_work_policy",
+      "title": "Remote Work Policy",
+      "section": "RW-3 Core Collaboration Hours",
+      "source": "data/policies/remote_work_policy.md",
+      "character_count": 208
+    },
+    {
+      "doc_id": "remote_work_policy",
+      "title": "Remote Work Policy",
+      "section": "RW-4 Equipment",
+      "source": "data/policies/remote_work_policy.md",
+      "character_count": 201
+    },
+    {
+      "doc_id": "remote_work_policy",
+      "title": "Remote Work Policy",
+      "section": "RW-5 Travel To Office",
+      "source": "data/policies/remote_work_policy.md",
+      "character_count": 171
+    },
+    {
+      "doc_id": "remote_work_policy",
+      "title": "Remote Work Policy",
+      "section": "RW-6 Policy Violations",
+      "source": "data/policies/remote_work_policy.md",
+      "character_count": 174
+    },
+    {
+      "doc_id": "security_policy",
+      "title": "Information Security Policy",
+      "section": "Information Security Policy",
+      "source": "data/policies/security_policy.md",
+      "character_count": 82
+    },
+    {
+      "doc_id": "security_policy",
+      "title": "Information Security Policy",
+      "section": "SEC-1 Passwords",
+      "source": "data/policies/security_policy.md",
+      "character_count": 160
+    },
+    {
+      "doc_id": "security_policy",
+      "title": "Information Security Policy",
+      "section": "SEC-2 Multi-Factor Authentication",
+      "source": "data/policies/security_policy.md",
+      "character_count": 209
+    },
+    {
+      "doc_id": "security_policy",
+      "title": "Information Security Policy",
+      "section": "SEC-3 Data Classification",
+      "source": "data/policies/security_policy.md",
+      "character_count": 207
+    },
+    {
+      "doc_id": "security_policy",
+      "title": "Information Security Policy",
+      "section": "SEC-4 Incident Reporting",
+      "source": "data/policies/security_policy.md",
+      "character_count": 248
+    },
+    {
+      "doc_id": "security_policy",
+      "title": "Information Security Policy",
+      "section": "SEC-5 Device Security",
+      "source": "data/policies/security_policy.md",
+      "character_count": 174
+    },
+    {
+      "doc_id": "security_policy",
+      "title": "Information Security Policy",
+      "section": "SEC-6 Access Reviews",
+      "source": "data/policies/security_policy.md",
+      "character_count": 161
+    }
+  ]
+}

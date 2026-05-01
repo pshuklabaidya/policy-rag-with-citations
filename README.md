@@ -177,6 +177,18 @@ Recommended GitHub topics for this project:
 rag, retrieval-augmented-generation, citations, streamlit, synthetic-data, document-ai, ai-portfolio
 ```
 
+## Data And Corpus Profile
+
+The synthetic policy corpus is documented in `docs/data_dictionary.md`.
+
+Generate a corpus profile:
+
+```bash
+python scripts/profile_corpus.py
+```
+
+The generated report is saved to `reports/corpus_profile.json`.
+
 ## Architecture Documentation
 
 Detailed architecture notes are available in `docs/architecture.md`.
