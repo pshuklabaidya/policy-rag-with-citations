@@ -32,20 +32,64 @@ def format_sources(chunks: List[Dict[str, str]]) -> List[Dict[str, str]]:
     return sources
 
 
-def answer_from_retrieved_context(query: str, chunks: List[Dict[str, str]]) -> str:
+def clean_policy_text(text: str) -> str:
+    lines = []
+
+    for line in text.splitlines():
+        stripped = line.strip()
+
+        if not stripped:
+            continue
+
+        if stripped.startswith("#"):
+            continue
+
+        if stripped.lower().startswith("synthetic document"):
+            continue
+
+        lines.append(stripped)
+
+    return " ".join(lines)
+
+
+def answer_from_retrieved_context(
+    query: str,
+    chunks: List[Dict[str, str]],
+    min_score: float = 0.05,
+) -> str:
     if not chunks:
-        return "No relevant policy evidence was retrieved."
+        return (
+            "No relevant policy evidence was retrieved. "
+            "The question cannot be answered from the available policy documents."
+        )
 
     strongest = chunks[0]
-    section = strongest["section"]
-    title = strongest["title"]
+    strongest_score = float(strongest.get("score", 0.0))
+
+    if strongest_score < min_score:
+        return (
+            "The available policy documents do not contain enough relevant evidence "
+            "to answer this question with a citation-grounded response."
+        )
+
+    strongest_text = clean_policy_text(strongest["text"])
 
     answer = (
-        f"The most relevant policy evidence is found in {title}, section {section} [1]. "
-        f"Based on that section, {strongest['text'].replace(chr(10), ' ')}"
+        f"{strongest_text} [1] "
+        f"This answer is grounded in {strongest['title']}, section {strongest['section']}."
     )
 
-    if len(chunks) > 1:
-        answer += " Additional supporting policy sections are listed in the retrieved sources."
+    supporting_chunks = [
+        chunk for chunk in chunks[1:]
+        if float(chunk.get("score", 0.0)) >= min_score
+    ]
+
+    if supporting_chunks:
+        supporting_refs = ", ".join(
+            f"[{index}]"
+            for index, chunk in enumerate(chunks[1:], start=2)
+            if float(chunk.get("score", 0.0)) >= min_score
+        )
+        answer += f" Supporting retrieved sections: {supporting_refs}."
 
     return answer
