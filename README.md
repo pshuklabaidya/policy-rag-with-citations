@@ -142,3 +142,17 @@ This template is for legitimate educational and portfolio demonstrations. It sho
 ## License
 
 MIT
+
+## Portfolio Evidence
+
+The repository includes generated demo and evaluation artifacts:
+
+- `reports/demo_outputs.md` shows example questions, citation-grounded answers, source sections, retrieval scores, and abstention behavior.
+- `reports/retrieval_eval.json` stores retrieval evaluation metrics for the baseline question set.
+
+Regenerate demo outputs:
+
+```bash
+python scripts/generate_demo_outputs.py
+```
+
