@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the deadline for submitting an expense report?",
+    "expected_source": "Expense Reimbursement Policy - EX-3 Submission Deadline"
+  },
+  {
+    "question": "When must security incidents be reported?",
+    "expected_source": "Information Security Policy - SEC-4 Incident Reporting"
+  },
+  {
+    "question": "What are the core collaboration hours for remote employees?",
+    "expected_source": "Remote Work Policy - RW-3 Core Collaboration Hours"
+  },
+  {
+    "question": "Are personal devices allowed for regular remote work?",
+    "expected_source": "Remote Work Policy - RW-4 Equipment"
+  },
+  {
+    "question": "Which systems require multi-factor authentication?",
+    "expected_source": "Information Security Policy - SEC-2 Multi-Factor Authentication"
+  }
+]
